@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DoGooder — AI-Powered Volunteer Matching | Zero Burnout</title>
+  <meta name="description" content="DoGooder uses AI to intelligently match volunteers with tasks, preventing burnout and maximizing social impact for NGOs worldwide.">
+
+  <!-- Font: Inter — the professional standard -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- React & ReactDOM -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Babel -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Tailwind CSS CDN + Custom Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'deep-space': '#09090B',
+            'void': '#030305',
+            'surface': '#111113',
+            'surface-light': '#18181B',
+            'primary': '#6366F1',
+            'primary-dim': '#4F46E5',
+            'primary-glow': '#818CF8',
+            'accent': '#14B8A6',
+            'accent-light': '#2DD4BF',
+            'silk': 'rgba(255, 255, 255, 0.06)',
+            'silk-light': 'rgba(255, 255, 255, 0.1)',
+            'border-subtle': 'rgba(255, 255, 255, 0.08)',
+          },
+          fontFamily: {
+            'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          letterSpacing: {
+            'tight-hero': '-0.04em',
+          },
+          backdropBlur: {
+            'glass': '24px',
+          },
+          animation: {
+            'ring-1': 'ringRotate1 14s linear infinite',
+            'ring-2': 'ringRotate2 20s linear infinite reverse',
+            'ring-3': 'ringRotate3 26s linear infinite',
+            'nucleus': 'nucleusPulse 5s ease-in-out infinite',
+            'float-slow': 'floatY 10s ease-in-out infinite',
+            'float-slower': 'floatY 14s ease-in-out infinite',
+            'glitch': 'holographicGlitch 4s ease-in-out infinite',
+            'stagger-in': 'staggerFadeIn 0.8s ease forwards',
+            'glow-breathe': 'glowBreathe 5s ease-in-out infinite',
+          },
+        },
+      },
+    }
+  </script>
+
+  <script>
+    window.exports = {};
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Load order: engines first, then components, then app mount -->
+  <script src="mockApi.js"></script>
+  <script src="scoringEngine.js"></script>
+  <script type="text/babel" src="LandingPage.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
